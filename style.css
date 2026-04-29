@@ -1,0 +1,18 @@
+html{
+    background-color: brown;
+    text-align: center;
+}
+
+section.lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.lista div{
+    max-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: darkred;
+}

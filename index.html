@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Age</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Principio de la zona para que para que la web funcione como una PWA. -->
+    <link rel="manifest" href="manifest.json"> <!-- Enlace al manifest.json  -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registered');
+                }).catch(function(err) {
+                    console.log('ServiceWorker error: ', err);
+                });
+            })
+        }
+    </script>
+    <!-- Fin de la zona en HTML para que la web funcione como PWA. -->
+</head>
+<body>
+    <head>
+        <h1>Saga de Dragon Age</h1>
+    </head>
+
+    <body>
+        <h2>Juegos de la saga</h2>
+        <section class="lista juegos">
+            <div class="dao">
+                <h3>Dragon Age Origins</h3>
+                <p>Primer juego de la saga, donde controlas al guarda gris y tienes que detener la misteriosa Ruina.</p>
+            </div>
+
+            <div class="da2">
+                <h3>Dragon Age 2</h3>
+                <p>Segundo juego de la saga, aquí controlas a Hawke mientras intenta adaptarse a vivir en Kirkwall tras que se le forzara de Ferelden durante la Ruina</p>
+            </div>
+
+            <div class="dai">
+                <h3>Dragon Age Inquisition</h3>
+                <p>Tercer juego de la saga, se controla a un personaje misterioso que tiene la capacidad de cerrar las grietas en el Velo que amenazan el mundo de Thedas.</p>
+            </div>
+
+            <div class="dav">
+                <h3>Dragon Age Veilguard</h3>
+                <p>Cuarto juego de la saga, controlas a Rook y tienes que detener los planes para llevar a Thedas al caos de un antiguo aliado del prota del juego anterior.</p>
+            </div>
+        </section>
+    </body>
+
+    <footer>
+        <p>Icono sacado de <a href="https://www.iconarchive.com/show/game-icons-by-titch-ix/Dragon-Age-icon.html">iconarchive</a>; PWA generado con <a href="https://pwa-factory.com/">PWA Factory</a>; los derechos de autor de Dragon Age recaen en BioWare y Electronics Arts.</p>
+    </footer>
+</body>
+</html>
